@@ -1,6 +1,10 @@
 import "../../styles/leftComponent.css";
+import SkillComponent from "../SkillComponent";
 
 function LeftComponent(props) {
+  const elements = props.skillSet.map((item) => (
+    <SkillComponent skillName={item.skillName} />
+  ));
   return (
     <div className="left--container">
       <div
@@ -33,6 +37,10 @@ function LeftComponent(props) {
           <i class="fa-brands fa-github details-icon"></i>
           <p>{props.details.githubLink}</p>
         </div>
+      </div>
+      <div className="skills-section">
+        <h1>Skills</h1>
+        {elements}
       </div>
     </div>
   );

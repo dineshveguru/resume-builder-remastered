@@ -1,4 +1,20 @@
+import React from "react";
+import SkillAdd from "./SkillAdd";
+import SkillComponent from "./SkillComponent";
+
 function Form(props) {
+  const [skillList, setSkillList] = React.useState([]);
+  function handleAddSkill(event) {
+    setSkillList(
+      skillList.concat(
+        <SkillAdd
+          key={skillList.length}
+          deleteSkill={props.deleteSkill}
+          changeSkill={props.changeSkill}
+        />
+      )
+    );
+  }
   return (
     <div>
       <p>name</p>
@@ -49,6 +65,11 @@ function Form(props) {
         name="githubLink"
         onChange={props.changeDetails}
       />
+      <p>skills</p>
+      <input type="text" onChange={props.changeSkill} />
+      <button onClick={props.changeSkillSet}>Add skill</button>
+      <button onClick={handleAddSkill}>Add new skill</button>
+      {skillList}
     </div>
   );
 }

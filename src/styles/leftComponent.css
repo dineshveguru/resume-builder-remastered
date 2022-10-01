@@ -48,3 +48,14 @@ html{
     color: #95bd00;
     font-size: 1.5rem;
 }
+
+.skills-section{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.skills-section h1{
+    color: #95bd00;
+    border-bottom: 1px solid #95bd00;
+    text-align: center;
+}
