@@ -7,6 +7,11 @@ import Form from "./components/Form";
 function App() {
   const [details, setDetails] = React.useState({
     name: "",
+    address: "",
+    contact: "",
+    mail: "",
+    linkedinProfile: "",
+    githubLink: "",
   });
   function changeDetails(event) {
     const { name, value } = event.target;

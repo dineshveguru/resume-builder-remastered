@@ -19,8 +19,26 @@ html{
 }
 
 .person--name{
-    font-size: 3rem;
-    color: rgb(149, 189, 0);
+    font-size: 2rem;
+    color: #95bd00;
     text-align: center;
     margin-top: 1.5rem;
+}
+
+.details--section p{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.details-section--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.details-icon{
+    color: #95bd00;
 }
