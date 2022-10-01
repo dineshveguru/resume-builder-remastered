@@ -1,0 +1,26 @@
+html{
+    font-size: 62.5%;
+}
+
+.left--container{
+    width: 30%;
+    background-color: rgba(149, 189, 0, 0.2);
+    height: inherit;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image--container{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 7.5rem;
+}
+
+.person--name{
+    font-size: 3rem;
+    color: rgb(149, 189, 0);
+    text-align: center;
+    margin-top: 1.5rem;
+}
