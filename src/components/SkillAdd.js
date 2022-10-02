@@ -1,8 +1,9 @@
+import "../styles/leftComponent.css";
+
 function SkillAdd(props) {
   return (
-    <div>
-      <input type="text" onChange={props.changeSkill} />
-      <button onClick={props.deleteSkill(props.key)}>delete</button>
+    <div className="skill-tag">
+      <p>{props.skillName}</p>
     </div>
   );
 }

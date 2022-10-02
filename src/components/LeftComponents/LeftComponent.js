@@ -1,9 +1,9 @@
 import "../../styles/leftComponent.css";
-import SkillComponent from "../SkillComponent";
+import SkillAdd from "../SkillAdd";
 
 function LeftComponent(props) {
-  const elements = props.skillSet.map((item) => (
-    <SkillComponent skillName={item.skillName} />
+  const skills = props.skillSet.map((skill) => (
+    <SkillAdd skillName={skill.skill} />
   ));
   return (
     <div className="left--container">
@@ -40,7 +40,12 @@ function LeftComponent(props) {
       </div>
       <div className="skills-section">
         <h1>Skills</h1>
-        {elements}
+        <div className="skill-tag--container">{skills}</div>
+      </div>
+
+      <div className="skills-section">
+        <h1>Tools/Technologies</h1>
+        <div className="skill-tag--container">{skills}</div>
       </div>
     </div>
   );

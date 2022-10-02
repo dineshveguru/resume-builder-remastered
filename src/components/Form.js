@@ -1,20 +1,13 @@
 import React from "react";
-import SkillAdd from "./SkillAdd";
 import SkillComponent from "./SkillComponent";
 
 function Form(props) {
-  const [skillList, setSkillList] = React.useState([]);
-  function handleAddSkill(event) {
-    setSkillList(
-      skillList.concat(
-        <SkillAdd
-          key={skillList.length}
-          deleteSkill={props.deleteSkill}
-          changeSkill={props.changeSkill}
-        />
-      )
-    );
-  }
+  const skills = props.skillSet.map((skill) => (
+    <SkillComponent skill={skill} deleteSkill={props.deleteSkill} />
+  ));
+  const techs = props.techSet.map((techItem) => (
+    <SkillComponent skill={techItem} deleteSkill={props.deleteTech} />
+  ));
   return (
     <div>
       <p>name</p>
@@ -66,10 +59,13 @@ function Form(props) {
         onChange={props.changeDetails}
       />
       <p>skills</p>
-      <input type="text" onChange={props.changeSkill} />
+      <input type="text" onChange={props.changeSkill} value={props.skill} />
       <button onClick={props.changeSkillSet}>Add skill</button>
-      <button onClick={handleAddSkill}>Add new skill</button>
-      {skillList}
+      {skills}
+      <p>Technologies</p>
+      <input type="text" onChange={props.changeTech} value={props.tech} />
+      <button onClick={props.changeTechSet}>Add skill</button>
+      {techs}
     </div>
   );
 }
