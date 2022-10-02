@@ -1,12 +1,13 @@
 import React from "react";
 import SkillComponent from "./SkillComponent";
+import TechComponent from "./TechComponent";
 
 function Form(props) {
   const skills = props.skillSet.map((skill) => (
     <SkillComponent skill={skill} deleteSkill={props.deleteSkill} />
   ));
   const techs = props.techSet.map((techItem) => (
-    <SkillComponent skill={techItem} deleteSkill={props.deleteTech} />
+    <TechComponent tech={techItem} deleteTech={props.deleteTech} />
   ));
   return (
     <div>
@@ -66,6 +67,9 @@ function Form(props) {
       <input type="text" onChange={props.changeTech} value={props.tech} />
       <button onClick={props.changeTechSet}>Add skill</button>
       {techs}
+      <p>Languages</p>
+      <input type="text" />
+      <button>Add language</button>
     </div>
   );
 }

@@ -6,7 +6,11 @@ function Resume(props) {
   return (
     <div>
       <div className="resume-container" ref={props.innerRef}>
-        <LeftComponent details={props.details} skillSet={props.skillSet} />
+        <LeftComponent
+          details={props.details}
+          skillSet={props.skillSet}
+          techSet={props.techSet}
+        />
         <RightComponent />
       </div>
     </div>

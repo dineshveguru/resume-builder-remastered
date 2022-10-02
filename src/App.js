@@ -78,7 +78,12 @@ function App() {
         <button onClick={handlePrint}>print me</button>
       </div>
       <div>
-        <Resume innerRef={componentRef} details={details} skillSet={skillSet} />
+        <Resume
+          innerRef={componentRef}
+          details={details}
+          skillSet={skillSet}
+          techSet={techSet}
+        />
       </div>
     </div>
   );
