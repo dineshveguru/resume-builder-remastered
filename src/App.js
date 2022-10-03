@@ -21,6 +21,8 @@ function App() {
   const [languageSet, setLanguageSet] = React.useState([]);
   const [interest, setInterest] = React.useState("");
   const [interestSet, setInterestSet] = React.useState([]);
+  const [about, setAbout] = React.useState("");
+
   function changeSkillSet(e) {
     if (skill) {
       let num = skillSet.length + 1;
@@ -93,6 +95,13 @@ function App() {
     deleteInterest: deleteInterest,
     changeInterest: changeInterest,
   };
+  function changeAbout(e) {
+    setAbout(e.target.value);
+  }
+  const aboutHandlers = {
+    about: about,
+    changeAbout: changeAbout,
+  };
   function changeDetails(event) {
     const { name, value } = event.target;
     setDetails((prevData) => ({
@@ -122,6 +131,7 @@ function App() {
           deleteTech={deleteTech}
           languageHandlers={languageHandlers}
           interestHandlers={interestHandlers}
+          aboutHandlers={aboutHandlers}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -133,6 +143,7 @@ function App() {
           techSet={techSet}
           languageSet={languageSet}
           interestSet={interestSet}
+          about={about}
         />
       </div>
     </div>

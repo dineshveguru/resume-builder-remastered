@@ -101,6 +101,8 @@ function Form(props) {
         Add interest
       </button>
       {interests}
+      <p>About section</p>
+      <textarea onChange={props.aboutHandlers.changeAbout} />
     </div>
   );
 }

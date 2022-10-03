@@ -1,0 +1,19 @@
+.right--container{
+    padding: 2.5rem 2rem;
+    width: 70%;
+}
+
+.about--section h1{
+    color: #95bd00;
+}
+
+.heading--container{
+    width: 50%;
+    border-bottom: 1px solid #95bd00;
+}
+
+.about--section p{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}

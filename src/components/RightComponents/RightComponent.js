@@ -1,7 +1,10 @@
-function RightComponent() {
+import About from "./About";
+import "../../styles/rightComponent.css";
+
+function RightComponent(props) {
   return (
-    <div>
-      <h1>Right Component</h1>
+    <div className="right--container">
+      <About about={props.about} />
     </div>
   );
 }
