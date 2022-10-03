@@ -19,6 +19,8 @@ function App() {
   const [techSet, setTechSet] = React.useState([]);
   const [language, setLanguage] = React.useState("");
   const [languageSet, setLanguageSet] = React.useState([]);
+  const [interest, setInterest] = React.useState("");
+  const [interestSet, setInterestSet] = React.useState([]);
   function changeSkillSet(e) {
     if (skill) {
       let num = skillSet.length + 1;
@@ -59,16 +61,37 @@ function App() {
       setLanguage("");
     }
   }
-  function deleteLanguage(id) {
-    let newSet = languageSet.filter((item) => item.id !== id);
-    setLanguageSet(newSet);
-  }
   const languageHandlers = {
     language: language,
     languageSet: languageSet,
     changeLanguageSet: changeLanguageSet,
     deleteLanguage: deleteLanguage,
     changeLanguage: changeLanguage,
+  };
+  function deleteLanguage(id) {
+    let newSet = languageSet.filter((item) => item.id !== id);
+    setLanguageSet(newSet);
+  }
+  function changeInterest(e) {
+    setInterest(e.target.value);
+  }
+  function changeInterestSet() {
+    if (interest) {
+      let newInterest = { id: interestSet.length + 1, interestName: interest };
+      setInterestSet([...interestSet, newInterest]);
+      setInterest("");
+    }
+  }
+  function deleteInterest(id) {
+    let newSet = interestSet.filter((item) => item.id !== id);
+    setInterestSet(newSet);
+  }
+  const interestHandlers = {
+    interest: interest,
+    interestSet: interestSet,
+    changeInterestSet: changeInterestSet,
+    deleteInterest: deleteInterest,
+    changeInterest: changeInterest,
   };
   function changeDetails(event) {
     const { name, value } = event.target;
@@ -98,6 +121,7 @@ function App() {
           techSet={techSet}
           deleteTech={deleteTech}
           languageHandlers={languageHandlers}
+          interestHandlers={interestHandlers}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -108,6 +132,7 @@ function App() {
           skillSet={skillSet}
           techSet={techSet}
           languageSet={languageSet}
+          interestSet={interestSet}
         />
       </div>
     </div>

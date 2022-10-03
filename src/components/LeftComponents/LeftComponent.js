@@ -1,4 +1,5 @@
 import "../../styles/leftComponent.css";
+import Interest from "../Interest";
 import Language from "../Language.js";
 import SkillAdd from "../SkillAdd";
 import TechAdd from "../TechAdd";
@@ -12,6 +13,9 @@ function LeftComponent(props) {
   ));
   const languages = props.languageSet.map((item) => (
     <Language languageName={item.languageName} />
+  ));
+  const interests = props.interestSet.map((item) => (
+    <Interest interestName={item.interestName} />
   ));
   return (
     <div className="left--container">
@@ -58,6 +62,10 @@ function LeftComponent(props) {
       <div className="skills-section">
         <h1>Languages</h1>
         {languages}
+      </div>
+      <div className="skills-section">
+        <h1>Interests</h1>
+        <div className="skill-tag--container">{interests}</div>
       </div>
     </div>
   );

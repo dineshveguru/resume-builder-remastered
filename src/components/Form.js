@@ -1,4 +1,5 @@
 import React from "react";
+import InterestComponent from "./InterestComponent";
 import LanguageComponent from "./LanguageComponent";
 import SkillComponent from "./SkillComponent";
 import TechComponent from "./TechComponent";
@@ -14,6 +15,12 @@ function Form(props) {
     <LanguageComponent
       languageItem={item}
       deleteLanguage={props.languageHandlers.deleteLanguage}
+    />
+  ));
+  const interests = props.interestHandlers.interestSet.map((item) => (
+    <InterestComponent
+      interestItem={item}
+      deleteInterest={props.interestHandlers.deleteInterest}
     />
   ));
   return (
@@ -84,6 +91,16 @@ function Form(props) {
         Add language
       </button>
       {languages}
+      <p>Interests</p>
+      <input
+        type="text"
+        onChange={props.interestHandlers.changeInterest}
+        value={props.interestHandlers.interest}
+      />
+      <button onClick={props.interestHandlers.changeInterestSet}>
+        Add interest
+      </button>
+      {interests}
     </div>
   );
 }
