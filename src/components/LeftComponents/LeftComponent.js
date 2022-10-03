@@ -1,4 +1,5 @@
 import "../../styles/leftComponent.css";
+import Language from "../Language.js";
 import SkillAdd from "../SkillAdd";
 import TechAdd from "../TechAdd";
 
@@ -8,6 +9,9 @@ function LeftComponent(props) {
   ));
   const techs = props.techSet.map((tech) => (
     <TechAdd techName={tech.techName} />
+  ));
+  const languages = props.languageSet.map((item) => (
+    <Language languageName={item.languageName} />
   ));
   return (
     <div className="left--container">
@@ -53,6 +57,7 @@ function LeftComponent(props) {
       </div>
       <div className="skills-section">
         <h1>Languages</h1>
+        {languages}
       </div>
     </div>
   );

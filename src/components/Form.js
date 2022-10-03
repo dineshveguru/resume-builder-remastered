@@ -1,4 +1,5 @@
 import React from "react";
+import LanguageComponent from "./LanguageComponent";
 import SkillComponent from "./SkillComponent";
 import TechComponent from "./TechComponent";
 
@@ -8,6 +9,12 @@ function Form(props) {
   ));
   const techs = props.techSet.map((techItem) => (
     <TechComponent tech={techItem} deleteTech={props.deleteTech} />
+  ));
+  const languages = props.languageHandlers.languageSet.map((item) => (
+    <LanguageComponent
+      languageItem={item}
+      deleteLanguage={props.languageHandlers.deleteLanguage}
+    />
   ));
   return (
     <div>
@@ -68,8 +75,15 @@ function Form(props) {
       <button onClick={props.changeTechSet}>Add skill</button>
       {techs}
       <p>Languages</p>
-      <input type="text" />
-      <button>Add language</button>
+      <input
+        type="text"
+        onChange={props.languageHandlers.changeLanguage}
+        value={props.languageHandlers.language}
+      />
+      <button onClick={props.languageHandlers.changeLanguageSet}>
+        Add language
+      </button>
+      {languages}
     </div>
   );
 }

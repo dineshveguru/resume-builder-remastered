@@ -10,6 +10,7 @@ function Resume(props) {
           details={props.details}
           skillSet={props.skillSet}
           techSet={props.techSet}
+          languageSet={props.languageSet}
         />
         <RightComponent />
       </div>

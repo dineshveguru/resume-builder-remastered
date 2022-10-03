@@ -17,6 +17,8 @@ function App() {
   const [skillSet, setSkillSet] = React.useState([]);
   const [tech, setTech] = React.useState("");
   const [techSet, setTechSet] = React.useState([]);
+  const [language, setLanguage] = React.useState("");
+  const [languageSet, setLanguageSet] = React.useState([]);
   function changeSkillSet(e) {
     if (skill) {
       let num = skillSet.length + 1;
@@ -47,6 +49,27 @@ function App() {
   function changeTech(e) {
     setTech(e.target.value);
   }
+  function changeLanguage(e) {
+    setLanguage(e.target.value);
+  }
+  function changeLanguageSet(e) {
+    if (language) {
+      let newLanguage = { id: languageSet.length + 1, languageName: language };
+      setLanguageSet([...languageSet, newLanguage]);
+      setLanguage("");
+    }
+  }
+  function deleteLanguage(id) {
+    let newSet = languageSet.filter((item) => item.id !== id);
+    setLanguageSet(newSet);
+  }
+  const languageHandlers = {
+    language: language,
+    languageSet: languageSet,
+    changeLanguageSet: changeLanguageSet,
+    deleteLanguage: deleteLanguage,
+    changeLanguage: changeLanguage,
+  };
   function changeDetails(event) {
     const { name, value } = event.target;
     setDetails((prevData) => ({
@@ -74,6 +97,7 @@ function App() {
           changeTechSet={changeTechSet}
           techSet={techSet}
           deleteTech={deleteTech}
+          languageHandlers={languageHandlers}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -83,6 +107,7 @@ function App() {
           details={details}
           skillSet={skillSet}
           techSet={techSet}
+          languageSet={languageSet}
         />
       </div>
     </div>
