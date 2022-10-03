@@ -1,4 +1,4 @@
-import "../styles/leftComponent.css";
+import "../../styles/leftComponent.css";
 
 function TechComponent(props) {
   return (

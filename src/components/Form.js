@@ -1,8 +1,8 @@
 import React from "react";
-import InterestComponent from "./InterestComponent";
-import LanguageComponent from "./LanguageComponent";
-import SkillComponent from "./SkillComponent";
-import TechComponent from "./TechComponent";
+import InterestComponent from "./LeftComponents/InterestComponent";
+import LanguageComponent from "./LeftComponents/LanguageComponent";
+import SkillComponent from "./LeftComponents/SkillComponent";
+import TechComponent from "./LeftComponents/TechComponent";
 
 function Form(props) {
   const skills = props.skillSet.map((skill) => (

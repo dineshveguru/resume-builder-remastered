@@ -1,5 +1,5 @@
 import Level from "./Level";
-import "../styles/resume.css";
+import "../../styles/resume.css";
 
 function Language(props) {
   return (

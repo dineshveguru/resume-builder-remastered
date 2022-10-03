@@ -1,8 +1,8 @@
 import "../../styles/leftComponent.css";
-import Interest from "../Interest";
-import Language from "../Language.js";
-import SkillAdd from "../SkillAdd";
-import TechAdd from "../TechAdd";
+import Interest from "./Interest";
+import Language from "./Language.js";
+import SkillAdd from "./SkillAdd";
+import TechAdd from "./TechAdd";
 
 function LeftComponent(props) {
   const skills = props.skillSet.map((skill) => (

@@ -1,4 +1,4 @@
-import "../styles/resume.css";
+import "../../styles/resume.css";
 import React from "react";
 
 function Level() {
