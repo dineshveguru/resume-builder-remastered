@@ -4,6 +4,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Certificate from "./Certificate";
 import Project from "./Project";
+import Activity from "./Activity";
 
 function RightComponent(props) {
   return (
@@ -13,6 +14,7 @@ function RightComponent(props) {
       <Experience experienceSet={props.experienceSet} />
       <Certificate certificateSet={props.certificateSet} />
       <Project projectSet={props.projectSet} />
+      <Activity activitySet={props.activitySet} />
     </div>
   );
 }

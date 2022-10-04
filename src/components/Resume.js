@@ -19,6 +19,7 @@ function Resume(props) {
           experienceSet={props.experienceSet}
           certificateSet={props.certificateSet}
           projectSet={props.projectSet}
+          activitySet={props.activitySet}
         />
       </div>
     </div>

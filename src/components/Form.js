@@ -8,6 +8,7 @@ import EducationComponent from "./RightComponents/EducationComponent";
 import ExperienceComponent from "./RightComponents/ExperienceComponent";
 import CertificateComponent from "./RightComponents/CertificateComponent";
 import ProjectComponent from "./RightComponents/ProjectComponent";
+import ActivityComponent from "./RightComponents/ActivityComponent";
 
 function Form(props) {
   const [to, setTo] = React.useState(new Date());
@@ -230,6 +231,22 @@ function Form(props) {
         <ProjectComponent
           props={item}
           delete={props.projectHandlers.deleteProjectDetail}
+        />
+      ))}
+      <h1>Additional Activities</h1>
+      <p>Activity</p>
+      <input
+        type="text"
+        value={props.activityHandlers.activity}
+        onChange={props.activityHandlers.changeActivity}
+      />
+      <button onClick={props.activityHandlers.changeActivitySet}>
+        Add activity
+      </button>
+      {props.activityHandlers.activitySet.map((item) => (
+        <ActivityComponent
+          props={item}
+          delete={props.activityHandlers.deleteActivity}
         />
       ))}
     </div>

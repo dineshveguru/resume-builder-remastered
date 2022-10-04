@@ -35,6 +35,8 @@ function App() {
     description: "",
     link: "",
   });
+  const [activity, setActivity] = React.useState("");
+  const [activitySet, setActivitySet] = React.useState([]);
   const [projectSet, setProjectSet] = React.useState([]);
   const [certificateSet, setCertificateSet] = React.useState([]);
   const [educationSet, setEduactionSet] = React.useState([]);
@@ -48,6 +50,28 @@ function App() {
   const [interestSet, setInterestSet] = React.useState([]);
   const [about, setAbout] = React.useState("");
   const [experienceSet, setExperienceSet] = React.useState([]);
+  function changeActivitySet() {
+    if (activity) {
+      let num = activitySet.length + 1;
+      let newActivity = { id: num, activityName: activity };
+      setActivitySet([...activitySet, newActivity]);
+      setActivity("");
+    }
+  }
+  function deleteActivity(id) {
+    let newSet = activitySet.filter((task) => task.id !== id);
+    setActivitySet(newSet);
+  }
+  function changeActivity(e) {
+    setActivity(e.target.value);
+  }
+  const activityHandlers = {
+    activity: activity,
+    activitySet: activitySet,
+    changeActivitySet: changeActivitySet,
+    deleteActivity: deleteActivity,
+    changeActivity: changeActivity,
+  };
   function changeEducationSet() {
     if (educationDetails.college && educationDetails.course) {
       let newDetail = {
@@ -307,6 +331,7 @@ function App() {
           experienceHandlers={experienceHandlers}
           certificationHandlers={certificationHandlers}
           projectHandlers={projectHandlers}
+          activityHandlers={activityHandlers}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -323,6 +348,7 @@ function App() {
           experienceSet={experienceSet}
           certificateSet={certificateSet}
           projectSet={projectSet}
+          activitySet={activitySet}
         />
       </div>
     </div>

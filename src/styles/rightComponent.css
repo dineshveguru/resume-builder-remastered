@@ -61,3 +61,12 @@
     color: #95bd00;
     margin-right: 10rem;
 }
+
+.activity--component{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.activity-container{
+    margin-left: 3rem;
+}
