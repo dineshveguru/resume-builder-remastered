@@ -24,6 +24,18 @@ function App() {
     title: "",
     issuingOrganization: "",
   });
+  const [experience, setExperience] = React.useState({
+    title: "",
+    description: "",
+    from: new Date(),
+    to: new Date(),
+  });
+  const [project, setProject] = React.useState({
+    title: "",
+    description: "",
+    link: "",
+  });
+  const [projectSet, setProjectSet] = React.useState([]);
   const [certificateSet, setCertificateSet] = React.useState([]);
   const [educationSet, setEduactionSet] = React.useState([]);
   const [skill, setSkill] = React.useState("");
@@ -35,12 +47,6 @@ function App() {
   const [interest, setInterest] = React.useState("");
   const [interestSet, setInterestSet] = React.useState([]);
   const [about, setAbout] = React.useState("");
-  const [experience, setExperience] = React.useState({
-    title: "",
-    description: "",
-    from: new Date(),
-    to: new Date(),
-  });
   const [experienceSet, setExperienceSet] = React.useState([]);
   function changeEducationSet() {
     if (educationDetails.college && educationDetails.course) {
@@ -109,6 +115,41 @@ function App() {
       [name]: value,
     }));
   }
+  function changeProjectSet() {
+    if (project.title) {
+      let newProject = {
+        id: projectSet.length + 1,
+        ProjectDetail: project,
+      };
+      setProjectSet([...projectSet, newProject]);
+      setProject({
+        title: "",
+        description: "",
+        link: "",
+      });
+    }
+    console.log(projectSet);
+  }
+
+  function deleteProjectDetail(id) {
+    let newSet = projectSet.filter((detail) => detail.id !== id);
+    setProjectSet(newSet);
+  }
+
+  function changeProjectDetail(e) {
+    const { name, value } = e.target;
+    setProject((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  }
+  const projectHandlers = {
+    project: project,
+    projectSet: projectSet,
+    changeProjectSet: changeProjectSet,
+    deleteProjectDetail: deleteProjectDetail,
+    changeProjectDetail: changeProjectDetail,
+  };
   function changeCertificateSet() {
     if (certification.title) {
       let newCertification = {
@@ -265,6 +306,7 @@ function App() {
           educationHandlers={educationHandlers}
           experienceHandlers={experienceHandlers}
           certificationHandlers={certificationHandlers}
+          projectHandlers={projectHandlers}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -280,6 +322,7 @@ function App() {
           educationSet={educationSet}
           experienceSet={experienceSet}
           certificateSet={certificateSet}
+          projectSet={projectSet}
         />
       </div>
     </div>

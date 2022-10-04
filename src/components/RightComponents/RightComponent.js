@@ -3,6 +3,7 @@ import "../../styles/rightComponent.css";
 import Education from "./Education";
 import Experience from "./Experience";
 import Certificate from "./Certificate";
+import Project from "./Project";
 
 function RightComponent(props) {
   return (
@@ -11,6 +12,7 @@ function RightComponent(props) {
       <Education educationSet={props.educationSet} />
       <Experience experienceSet={props.experienceSet} />
       <Certificate certificateSet={props.certificateSet} />
+      <Project projectSet={props.projectSet} />
     </div>
   );
 }

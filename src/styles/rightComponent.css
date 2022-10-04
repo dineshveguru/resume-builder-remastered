@@ -55,3 +55,9 @@
 .description--section{
     font-weight: 400;
 }
+
+.project--link{
+    font-weight: 500;
+    color: #95bd00;
+    margin-right: 10rem;
+}

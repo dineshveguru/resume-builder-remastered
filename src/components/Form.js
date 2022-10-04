@@ -7,6 +7,7 @@ import DatePicker from "react-date-picker";
 import EducationComponent from "./RightComponents/EducationComponent";
 import ExperienceComponent from "./RightComponents/ExperienceComponent";
 import CertificateComponent from "./RightComponents/CertificateComponent";
+import ProjectComponent from "./RightComponents/ProjectComponent";
 
 function Form(props) {
   const [to, setTo] = React.useState(new Date());
@@ -198,6 +199,37 @@ function Form(props) {
         <CertificateComponent
           props={item}
           delete={props.certificationHandlers.deleteCertificateDetail}
+        />
+      ))}
+      <h1>Project Details</h1>
+      <p>title</p>
+      <input
+        type="text"
+        name="title"
+        value={props.projectHandlers.project.title}
+        onChange={props.projectHandlers.changeProjectDetail}
+      />
+      <p>Description</p>
+      <input
+        type="text"
+        name="description"
+        value={props.projectHandlers.project.description}
+        onChange={props.projectHandlers.changeProjectDetail}
+      />
+      <p>Link</p>
+      <input
+        type="text"
+        name="link"
+        value={props.projectHandlers.project.link}
+        onChange={props.projectHandlers.changeProjectDetail}
+      />
+      <button onClick={props.projectHandlers.changeProjectSet}>
+        Add Project
+      </button>
+      {props.projectHandlers.projectSet.map((item) => (
+        <ProjectComponent
+          props={item}
+          delete={props.projectHandlers.deleteProjectDetail}
         />
       ))}
     </div>
