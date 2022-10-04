@@ -20,6 +20,11 @@ function App() {
     to: new Date(),
     cgpa: "",
   });
+  const [certification, setCertification] = React.useState({
+    title: "",
+    issuingOrganization: "",
+  });
+  const [certificateSet, setCertificateSet] = React.useState([]);
   const [educationSet, setEduactionSet] = React.useState([]);
   const [skill, setSkill] = React.useState("");
   const [skillSet, setSkillSet] = React.useState([]);
@@ -30,7 +35,13 @@ function App() {
   const [interest, setInterest] = React.useState("");
   const [interestSet, setInterestSet] = React.useState([]);
   const [about, setAbout] = React.useState("");
-
+  const [experience, setExperience] = React.useState({
+    title: "",
+    description: "",
+    from: new Date(),
+    to: new Date(),
+  });
+  const [experienceSet, setExperienceSet] = React.useState([]);
   function changeEducationSet() {
     if (educationDetails.college && educationDetails.course) {
       let newDetail = {
@@ -49,6 +60,14 @@ function App() {
     console.log(educationSet);
   }
 
+  const educationHandlers = {
+    educationDetails: educationDetails,
+    educationSet: educationSet,
+    changeEducationSet: changeEducationSet,
+    deleteEducationDetail: deleteEducationDetail,
+    changeEdcationDetail: changeEdcationDetail,
+  };
+
   function deleteEducationDetail(id) {
     let newSet = educationSet.filter((detail) => detail.id !== id);
     setEduactionSet(newSet);
@@ -61,13 +80,77 @@ function App() {
       [name]: value,
     }));
   }
+  function changeExperienceSet() {
+    if (experience.title) {
+      let newExperience = {
+        id: experienceSet.length + 1,
+        experienceDetail: experience,
+      };
+      setExperienceSet([...experienceSet, newExperience]);
+      setExperience({
+        title: "",
+        description: "",
+        from: new Date(),
+        to: new Date(),
+      });
+    }
+    console.log(experienceSet);
+  }
 
-  const educationHandlers = {
-    educationDetails: educationDetails,
-    educationSet: educationSet,
-    changeEducationSet: changeEducationSet,
-    deleteEducationDetail: deleteEducationDetail,
-    changeEdcationDetail: changeEdcationDetail,
+  function deleteExperienceDetail(id) {
+    let newSet = experienceSet.filter((detail) => detail.id !== id);
+    setExperienceSet(newSet);
+  }
+
+  function changeExperienceDetail(e) {
+    const { name, value } = e.target;
+    setExperience((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  }
+  function changeCertificateSet() {
+    if (certification.title) {
+      let newCertification = {
+        id: certificateSet.length + 1,
+        CertificateDetail: certification,
+      };
+      setCertificateSet([...certificateSet, newCertification]);
+      setCertification({
+        title: "",
+        issuingOrganization: "",
+      });
+    }
+    console.log(certificateSet);
+  }
+
+  function deleteCertificateDetail(id) {
+    let newSet = certificateSet.filter((detail) => detail.id !== id);
+    setCertificateSet(newSet);
+  }
+
+  function changeCertificationDetail(e) {
+    const { name, value } = e.target;
+    setCertification((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  }
+
+  const certificationHandlers = {
+    certification: certification,
+    certificateSet: certificateSet,
+    changeCertificateSet: changeCertificateSet,
+    deleteCertificateDetail: deleteCertificateDetail,
+    changeCertificationDetail: changeCertificationDetail,
+  };
+
+  const experienceHandlers = {
+    experience: experience,
+    experienceSet: experienceSet,
+    changeExperienceSet: changeExperienceSet,
+    deleteExperienceDetail: deleteExperienceDetail,
+    changeExperienceDetail: changeExperienceDetail,
   };
 
   function changeSkillSet(e) {
@@ -180,6 +263,8 @@ function App() {
           interestHandlers={interestHandlers}
           aboutHandlers={aboutHandlers}
           educationHandlers={educationHandlers}
+          experienceHandlers={experienceHandlers}
+          certificationHandlers={certificationHandlers}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -193,6 +278,8 @@ function App() {
           interestSet={interestSet}
           about={about}
           educationSet={educationSet}
+          experienceSet={experienceSet}
+          certificateSet={certificateSet}
         />
       </div>
     </div>
