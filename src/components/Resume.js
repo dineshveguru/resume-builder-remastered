@@ -12,6 +12,7 @@ function Resume(props) {
           techSet={props.techSet}
           languageSet={props.languageSet}
           interestSet={props.interestSet}
+          imgUrl={props.imgUrl}
         />
         <RightComponent
           about={props.about}

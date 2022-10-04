@@ -1,10 +1,12 @@
 import "./App.css";
 import { useReactToPrint } from "react-to-print";
 import Resume from "./components/Resume";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Form from "./components/Form";
 
 function App() {
+  const [images, setImages] = React.useState([]);
+  const [imgUrl, setImgUrl] = React.useState([]);
   const [details, setDetails] = React.useState({
     name: "",
     address: "",
@@ -50,6 +52,19 @@ function App() {
   const [interestSet, setInterestSet] = React.useState([]);
   const [about, setAbout] = React.useState("");
   const [experienceSet, setExperienceSet] = React.useState([]);
+  function changeImageLink(e) {
+    setImages([...e.target.files]);
+  }
+
+  useEffect(() => {
+    if (images.length < 1) return;
+    const newImageUrl = [];
+    // images.forEach((image) => newImageUrl.push(URL.createObjectURL(image)));
+    for (const image of images) {
+      newImageUrl.push(URL.createObjectURL(image));
+    }
+    setImgUrl(newImageUrl);
+  }, [images]);
   function changeActivitySet() {
     if (activity) {
       let num = activitySet.length + 1;
@@ -332,6 +347,7 @@ function App() {
           certificationHandlers={certificationHandlers}
           projectHandlers={projectHandlers}
           activityHandlers={activityHandlers}
+          changeImageLink={changeImageLink}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -349,6 +365,7 @@ function App() {
           certificateSet={certificateSet}
           projectSet={projectSet}
           activitySet={activitySet}
+          imgUrl={imgUrl}
         />
       </div>
     </div>

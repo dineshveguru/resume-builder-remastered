@@ -35,8 +35,10 @@ function Form(props) {
       deleteInterest={props.interestHandlers.deleteInterest}
     />
   ));
+
   return (
     <div>
+      <input type="file" accept="image/*" onChange={props.changeImageLink} />
       <p>name</p>
       <input
         type="text"

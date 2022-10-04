@@ -9,7 +9,7 @@ html{
 
 .resume-container{
     width: 210mm;
-    min-height: 297mm;
+    height: 297mm;
     box-shadow: 0px 0px 3px 2px rgb(223, 223, 223);
     display: flex;
 }

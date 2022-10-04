@@ -26,7 +26,7 @@
 
 .education--section hr{
     border: 0;
-    border-bottom: 1.5px dotted rgba(149, 189, 0, 0.5);
+    border-bottom: 0.2px dotted rgb(234, 234, 234);
 }
 
 .education--tag{

@@ -22,7 +22,7 @@ function LeftComponent(props) {
       <div
         className="image--container"
         style={{
-          backgroundImage: "url(/test.jpg)",
+          backgroundImage: `url(${props.imgUrl[0]})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}

@@ -5,7 +5,7 @@ html{
 .left--container{
     width: 30%;
     background-color: rgba(149, 189, 0, 0.2);
-    height: inherit;
+    max-height: inherit;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -13,8 +13,8 @@ html{
 }
 
 .image--container{
-    width: 15rem;
-    height: 15rem;
+    min-width: 15rem;
+    min-height: 15rem;
     border-radius: 7.5rem;
 }
 
@@ -41,7 +41,7 @@ html{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .details-icon{
@@ -51,7 +51,7 @@ html{
 
 .skills-section{
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .skills-section h1{
@@ -69,7 +69,7 @@ html{
 
 .skill-tag{
     width: max-content;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
     border: 1px solid #95bd00;
     font-weight: 600;
@@ -85,8 +85,8 @@ html{
 }
 
 .level{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 1rem;
     border: 1px solid #95bd00;
     cursor: pointer;
@@ -104,7 +104,7 @@ html{
 .language--container{
     display: flex;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     justify-content: flex-end;
     margin-right: 2rem;
     align-items: center;
