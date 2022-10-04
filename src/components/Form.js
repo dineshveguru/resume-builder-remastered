@@ -3,8 +3,14 @@ import InterestComponent from "./LeftComponents/InterestComponent";
 import LanguageComponent from "./LeftComponents/LanguageComponent";
 import SkillComponent from "./LeftComponents/SkillComponent";
 import TechComponent from "./LeftComponents/TechComponent";
+import DatePicker from "react-date-picker";
+import EducationComponent from "./RightComponents/EducationComponent";
 
 function Form(props) {
+  const [to, setTo] = React.useState(new Date());
+  const [from, setFrom] = React.useState(new Date());
+  props.educationHandlers.educationDetails.from = from;
+  props.educationHandlers.educationDetails.to = to;
   const skills = props.skillSet.map((skill) => (
     <SkillComponent skill={skill} deleteSkill={props.deleteSkill} />
   ));
@@ -103,6 +109,41 @@ function Form(props) {
       {interests}
       <p>About section</p>
       <textarea onChange={props.aboutHandlers.changeAbout} />
+      <h3>Education section</h3>
+      <p>Course</p>
+      <input
+        name="course"
+        type="text"
+        value={props.educationHandlers.educationDetails.course}
+        onChange={props.educationHandlers.changeEdcationDetail}
+      />
+      <p>College</p>
+      <input
+        type="text"
+        name="college"
+        value={props.educationHandlers.educationDetails.college}
+        onChange={props.educationHandlers.changeEdcationDetail}
+      />
+      <p>CGPA</p>
+      <input
+        name="cgpa"
+        type="text"
+        value={props.educationHandlers.educationDetails.cgpa}
+        onChange={props.educationHandlers.changeEdcationDetail}
+      />
+      <p>From Date</p>
+      <DatePicker onChange={(date) => setFrom(date)} value={from} name="from" />
+      <p>To Date</p>
+      <DatePicker onChange={(date) => setTo(date)} value={to} name="to" />
+      <button onClick={props.educationHandlers.changeEducationSet}>
+        Add details
+      </button>
+      {props.educationHandlers.educationSet.map((item) => (
+        <EducationComponent
+          props={item}
+          delete={props.educationHandlers.deleteEducationDetail}
+        />
+      ))}
     </div>
   );
 }

@@ -13,7 +13,7 @@ function Resume(props) {
           languageSet={props.languageSet}
           interestSet={props.interestSet}
         />
-        <RightComponent about={props.about} />
+        <RightComponent about={props.about} educationSet={props.educationSet} />
       </div>
     </div>
   );

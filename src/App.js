@@ -13,6 +13,14 @@ function App() {
     linkedinProfile: "",
     githubLink: "",
   });
+  const [educationDetails, setEducationDetails] = React.useState({
+    course: "",
+    college: "",
+    from: new Date(),
+    to: new Date(),
+    cgpa: "",
+  });
+  const [educationSet, setEduactionSet] = React.useState([]);
   const [skill, setSkill] = React.useState("");
   const [skillSet, setSkillSet] = React.useState([]);
   const [tech, setTech] = React.useState("");
@@ -22,6 +30,45 @@ function App() {
   const [interest, setInterest] = React.useState("");
   const [interestSet, setInterestSet] = React.useState([]);
   const [about, setAbout] = React.useState("");
+
+  function changeEducationSet() {
+    if (educationDetails.college && educationDetails.course) {
+      let newDetail = {
+        id: educationSet.length + 1,
+        educationDetail: educationDetails,
+      };
+      setEduactionSet([...educationSet, newDetail]);
+      setEducationDetails({
+        course: "",
+        college: "",
+        from: new Date(),
+        to: new Date(),
+        cgpa: "",
+      });
+    }
+    console.log(educationSet);
+  }
+
+  function deleteEducationDetail(id) {
+    let newSet = educationSet.filter((detail) => detail.id !== id);
+    setEduactionSet(newSet);
+  }
+
+  function changeEdcationDetail(e) {
+    const { name, value } = e.target;
+    setEducationDetails((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  }
+
+  const educationHandlers = {
+    educationDetails: educationDetails,
+    educationSet: educationSet,
+    changeEducationSet: changeEducationSet,
+    deleteEducationDetail: deleteEducationDetail,
+    changeEdcationDetail: changeEdcationDetail,
+  };
 
   function changeSkillSet(e) {
     if (skill) {
@@ -132,6 +179,7 @@ function App() {
           languageHandlers={languageHandlers}
           interestHandlers={interestHandlers}
           aboutHandlers={aboutHandlers}
+          educationHandlers={educationHandlers}
         />
         <button onClick={handlePrint}>print me</button>
       </div>
@@ -144,6 +192,7 @@ function App() {
           languageSet={languageSet}
           interestSet={interestSet}
           about={about}
+          educationSet={educationSet}
         />
       </div>
     </div>

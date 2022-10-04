@@ -3,8 +3,9 @@
     width: 70%;
 }
 
-.about--section h1{
+.right--container h1{
     color: #95bd00;
+
 }
 
 .heading--container{
@@ -16,4 +17,36 @@
     font-weight: 600;
     font-size: 1.5rem;
     margin-top: 1rem;
+}
+
+.education--section{
+    margin-top: 1.5rem;
+}
+
+.education--section hr{
+    border: 0;
+    border-bottom: 1.5px solid rgba(149, 189, 0, 0.5);
+}
+
+.education--tag{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin: 1rem 1rem;
+    font-weight: 500;
+}
+
+.education-tag--container{
+    display: flex;
+}
+
+.cgpa-section{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #95bd00;
+}
+
+.college-section{
+    font-weight: 700;
 }
