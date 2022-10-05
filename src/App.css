@@ -11,3 +11,24 @@
   max-height: 297mm;
   overflow: scroll;
 }
+
+
+.print-button{
+  background-color: rgb(255, 255, 255);
+  border: 0;
+  width: 20rem;
+  height: 4rem;
+  background-color: #94bd00a1;
+  border-radius: 1rem;
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  margin-left: 35%;
+}
+
+.print-button:focus{
+  outline: 0;
+  border: 0;
+  border: 3px solid #95bd00;
+}

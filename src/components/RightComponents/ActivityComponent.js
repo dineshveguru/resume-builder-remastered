@@ -1,6 +1,6 @@
 function ActivityComponent(props) {
   return (
-    <div>
+    <div className="skill-component--container">
       <p>{props.props.activityName}</p>
       <i
         class="fa-solid fa-xmark"

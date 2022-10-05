@@ -3,8 +3,8 @@ html{
 }
 
 .container{
-    background-color: rgb(236, 243, 251);
-    border: 1px solid rgb(208, 229, 255);
+    background-color: rgba(149, 189, 0, 0.2);
+    border: 1px solid #95bd00;
     border-radius: 1rem;
     padding: 2rem 1rem;
     margin-bottom: 1rem;
@@ -13,12 +13,26 @@ html{
 .container--message{
     margin-bottom: 0.2rem;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .button{
     background-color: rgb(255, 255, 255);
     border: 0;
+    width: 15rem;
+    height: 4rem;
+    background-color: #94bd00a1;
+    border-radius: 1rem;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.button:focus{
+    outline: 0;
+    border: 0;
+    border: 3px solid #95bd00;
 }
 
 .input{
@@ -39,4 +53,29 @@ html{
 
 .input-element{
     margin-bottom: 0.5rem;
+}
+
+.button-container{
+    max-width: max-content;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.component{
+    border: 1px solid #95bd00;
+}
+
+.component-container{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.container--heading{
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #95bd00;
 }

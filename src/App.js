@@ -349,7 +349,9 @@ function App() {
           activityHandlers={activityHandlers}
           changeImageLink={changeImageLink}
         />
-        <button onClick={handlePrint}>print me</button>
+        <button onClick={handlePrint} className="print-button">
+          print me
+        </button>
       </div>
       <div>
         <Resume

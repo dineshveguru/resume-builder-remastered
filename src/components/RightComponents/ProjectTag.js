@@ -6,10 +6,10 @@ function ProjectTag(props) {
       <div className={`education--tag`}>
         <div className="project--section">
           <p className="college-section">{props.detail.ProjectDetail.title}</p>
-          <p className="project--link">{props.detail.ProjectDetail.link}</p>
+          <p>{props.detail.ProjectDetail.description}</p>
         </div>
         <div>
-          <p>{props.detail.ProjectDetail.description}</p>
+          <p className="project--link">{props.detail.ProjectDetail.link}</p>
         </div>
       </div>
     </div>

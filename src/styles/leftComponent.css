@@ -76,6 +76,14 @@ html{
     width: max-content;
     align-items: center;
     gap: 0.5rem;
+    border: 1px solid #95bd00;
+    color: #fff;
+    padding:1rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #94bd0069;
+    font-weight: 500;
+    font-size: 1.2rem;
+    gap: 1rem;
 }
 
 .skill-tag{
