@@ -2,4 +2,12 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
+
+}
+
+.form--container{
+  width: 100%;
+  padding-right: 2rem;
+  max-height: 297mm;
+  overflow: scroll;
 }

@@ -9,6 +9,7 @@ import ExperienceComponent from "./RightComponents/ExperienceComponent";
 import CertificateComponent from "./RightComponents/CertificateComponent";
 import ProjectComponent from "./RightComponents/ProjectComponent";
 import ActivityComponent from "./RightComponents/ActivityComponent";
+import "../styles/form.css";
 
 function Form(props) {
   const [to, setTo] = React.useState(new Date());
@@ -38,83 +39,106 @@ function Form(props) {
 
   return (
     <div>
-      <input type="file" accept="image/*" onChange={props.changeImageLink} />
-      <p>name</p>
-      <input
-        type="text"
-        placeholder="enter name"
-        value={props.details.name}
-        name="name"
-        onChange={props.changeDetails}
-      />
-      <p>Address</p>
-      <input
-        type="text"
-        placeholder="enter address"
-        value={props.details.address}
-        name="address"
-        onChange={props.changeDetails}
-      />
-      <p>Contact Number</p>
-      <input
-        type="text"
-        placeholder="enter contact"
-        value={props.details.contact}
-        name="contact"
-        onChange={props.changeDetails}
-      />
-      <p>E-mail</p>
-      <input
-        type="text"
-        placeholder="enter mail"
-        value={props.details.mail}
-        name="mail"
-        onChange={props.changeDetails}
-      />
-      <p>LinkedIn Profile Link</p>
-      <input
-        type="text"
-        placeholder="enter linkenIn profile"
-        value={props.details.linkedinProfile}
-        name="linkedinProfile"
-        onChange={props.changeDetails}
-      />
-      <p>GitHub Profile Link</p>
-      <input
-        type="text"
-        placeholder="enter github link"
-        value={props.details.githubLink}
-        name="githubLink"
-        onChange={props.changeDetails}
-      />
-      <p>skills</p>
-      <input type="text" onChange={props.changeSkill} value={props.skill} />
-      <button onClick={props.changeSkillSet}>Add skill</button>
-      {skills}
-      <p>Technologies</p>
-      <input type="text" onChange={props.changeTech} value={props.tech} />
-      <button onClick={props.changeTechSet}>Add skill</button>
-      {techs}
-      <p>Languages</p>
-      <input
-        type="text"
-        onChange={props.languageHandlers.changeLanguage}
-        value={props.languageHandlers.language}
-      />
-      <button onClick={props.languageHandlers.changeLanguageSet}>
-        Add language
-      </button>
-      {languages}
-      <p>Interests</p>
-      <input
-        type="text"
-        onChange={props.interestHandlers.changeInterest}
-        value={props.interestHandlers.interest}
-      />
-      <button onClick={props.interestHandlers.changeInterestSet}>
-        Add interest
-      </button>
-      {interests}
+      <div className="container">
+        <p className="container--message">Upload Image</p>
+        <input type="file" accept="image/*" onChange={props.changeImageLink} />
+      </div>
+      <div className="container">
+        <div className="input-element">
+          <p className="container--message">Name</p>
+          <input
+            type="text"
+            placeholder="enter name"
+            value={props.details.name}
+            name="name"
+            onChange={props.changeDetails}
+            className="input"
+          />
+        </div>
+        <div className="input-element">
+          <p className="container--message">Address</p>
+          <input
+            type="text"
+            placeholder="enter address"
+            value={props.details.address}
+            name="address"
+            onChange={props.changeDetails}
+            className="input"
+          />
+        </div>
+        <div className="input-element">
+          <p className="container--message">Contact Number</p>
+          <input
+            type="text"
+            placeholder="enter contact"
+            value={props.details.contact}
+            name="contact"
+            onChange={props.changeDetails}
+            className="input"
+          />
+        </div>
+        <div className="input-element">
+          <p className="container--message">E-mail</p>
+          <input
+            type="text"
+            placeholder="enter mail"
+            value={props.details.mail}
+            name="mail"
+            onChange={props.changeDetails}
+            className="input"
+          />
+        </div>
+        <div className="input-element">
+          <p className="container--message">LinkedIn Profile Link</p>
+          <input
+            type="text"
+            placeholder="enter linkenIn profile"
+            value={props.details.linkedinProfile}
+            name="linkedinProfile"
+            onChange={props.changeDetails}
+            className="input"
+          />
+        </div>
+        <div className="input-element">
+          <p className="container--message">GitHub Profile Link</p>
+          <input
+            type="text"
+            placeholder="enter github link"
+            value={props.details.githubLink}
+            name="githubLink"
+            onChange={props.changeDetails}
+            className="input"
+          />
+        </div>
+        <p>skills</p>
+        <input type="text" onChange={props.changeSkill} value={props.skill} />
+        <button onClick={props.changeSkillSet}>Add skill</button>
+        {skills}
+        <p>Technologies</p>
+        <input type="text" onChange={props.changeTech} value={props.tech} />
+        <button onClick={props.changeTechSet}>Add skill</button>
+        {techs}
+        <p>Languages</p>
+        <input
+          type="text"
+          onChange={props.languageHandlers.changeLanguage}
+          value={props.languageHandlers.language}
+        />
+        <button onClick={props.languageHandlers.changeLanguageSet}>
+          Add language
+        </button>
+        {languages}
+        <p>Interests</p>
+        <input
+          type="text"
+          onChange={props.interestHandlers.changeInterest}
+          value={props.interestHandlers.interest}
+        />
+        <button onClick={props.interestHandlers.changeInterestSet}>
+          Add interest
+        </button>
+        {interests}
+      </div>
       <p>About section</p>
       <textarea onChange={props.aboutHandlers.changeAbout} />
       <h1>Education section</h1>

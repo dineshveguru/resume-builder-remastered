@@ -12,6 +12,7 @@ html{
     align-items: center;
 }
 
+
 .image--container{
     min-width: 15rem;
     min-height: 15rem;
@@ -33,15 +34,25 @@ html{
 .details--section{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
 }
 
 .details-section--container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     margin-top: 0.5rem;
+    width: inherit;
+}
+
+
+.details-section--container p{
+    word-wrap: break-word;
+}
+
+.details--text{
+    width: 90%;
 }
 
 .details-icon{

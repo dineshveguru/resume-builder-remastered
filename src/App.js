@@ -325,7 +325,7 @@ function App() {
   });
   return (
     <div className="App">
-      <div>
+      <div className="form--container">
         <Form
           details={details}
           changeDetails={changeDetails}

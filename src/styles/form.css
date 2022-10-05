@@ -1,0 +1,42 @@
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    background-color: rgb(236, 243, 251);
+    border: 1px solid rgb(208, 229, 255);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.container--message{
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.button{
+    background-color: rgb(255, 255, 255);
+    border: 0;
+}
+
+.input{
+    border: 0;
+    padding: 1.5rem 1rem;
+    width: 25rem;
+    border: 1px solid rgb(208, 229, 255);
+    border-radius: 1rem;
+}
+
+
+.input:focus{
+    border: 0;
+    outline: 0;
+    border: 3px solid rgb(208, 229, 255);
+    transition: all 0.3s;
+}
+
+.input-element{
+    margin-bottom: 0.5rem;
+}
