@@ -44,11 +44,15 @@ function Form(props) {
   return (
     <div>
       <div className="container">
-        <h1 className="container--heading">Upload Image</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-image heading-icon"></i>Upload Image
+        </h1>
         <input type="file" accept="image/*" onChange={props.changeImageLink} />
       </div>
       <div className="container">
-        <h1 className="container--heading">Basic Details</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-address-card heading-icon"></i>Basic Details
+        </h1>
         <div className="input-element">
           <p className="container--message">Name</p>
           <input
@@ -183,14 +187,18 @@ function Form(props) {
         </div>
       </div>
       <div className="container">
-        <h1 className="container--heading">About section</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-user heading-icon"></i>About section
+        </h1>
         <textarea
           onChange={props.aboutHandlers.changeAbout}
           className="input"
         />
       </div>
       <div className="container">
-        <h1 className="container--heading">Education section</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-book-open heading-icon"></i>Education section
+        </h1>
         <p className="container--message">Course</p>
         <input
           name="course"
@@ -241,7 +249,9 @@ function Form(props) {
         </div>
       </div>
       <div className="container">
-        <h1 className="container--heading">Experience Details</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-building heading-icon"></i>Experience Details
+        </h1>
         <div className="input-element">
           <p className="container--message">title</p>
           <input
@@ -288,7 +298,10 @@ function Form(props) {
         </div>
       </div>
       <div className="container">
-        <h1 className="container--heading">Certification Details</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-certificate heading-icon"></i>Certification
+          Details
+        </h1>
         <p className="container--message">Add title</p>
         <input
           type="text"
@@ -325,7 +338,9 @@ function Form(props) {
         </div>
       </div>
       <div className="container">
-        <h1 className="container--heading">Project Details</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-cubes heading-icon"></i>Project Details
+        </h1>
         <div className="input-element">
           <p className="container--message">title</p>
           <input
@@ -372,7 +387,10 @@ function Form(props) {
         </div>
       </div>
       <div className="container">
-        <h1 className="container--heading">Additional Activities</h1>
+        <h1 className="container--heading">
+          <i class="fa-solid fa-chart-line heading-icon"></i>Additional
+          Activities
+        </h1>
         <p className="container--message">Activity</p>
         <div className="button-container">
           <input
