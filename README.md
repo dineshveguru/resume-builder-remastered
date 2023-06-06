@@ -62,4 +62,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any questions or feedback, please mail me at dineshveguru123@gmail.com
 
-**Thank you for using the Resume Builder Application! We hope it helps you create outstanding resumes and land your dream job. If you encounter any issues or have suggestions for improvement, please don't hesitate to reach out. Happy resume building!**
+**Thank you for using the Resume Builder Application🌟! We hope it helps you create outstanding resumes and land your dream job. If you encounter any issues or have suggestions for improvement, please don't hesitate to reach out. Happy resume building!**
