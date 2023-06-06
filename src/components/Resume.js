@@ -4,8 +4,8 @@ import RightComponent from "./RightComponents/RightComponent";
 
 function Resume(props) {
   return (
-    <div>
-      <div className="resume-container" ref={props.innerRef}>
+    <div ref={props.innerRef}>
+      <div className="resume-container">
         <LeftComponent
           details={props.details}
           skillSet={props.skillSet}
