@@ -2,7 +2,7 @@
   "name": "resume-builder-remastered",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dineshveguru.gitub.io/resume-builder-remastered",
+  "homepage": "https://dineshveguru.github.io/resume-builder-remastered/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
