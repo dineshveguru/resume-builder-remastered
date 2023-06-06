@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Resume Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo](https://github.com/dineshveguru/resume-builder-remastered/assets/82778240/8a449455-ae88-4f87-82e5-856d94b3acae)
 
-## Available Scripts
+Resume Builder is a web based tool that allows users to create and download professional resumes effortlessly
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Friendly Interface**: The application prioritizes simplicity and ease of use, ensuring that users can effortlessly navigate through the resume creation process.
+- **Section Customization**: Easily add and remove items in the section.
+- **Profile Banner**: Add Images to your resume.
+- **Download**: Download the final resume as a PDF file, ready to be shared with potential employers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Click Here to go to application](https://dineshveguru.github.io/resume-builder-remastered/)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone this repository using the following command
 
-### `npm run build`
+```
+https://github.com/dineshveguru/resume-builder-remastered
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+then, go to resume-builder-remastered folder using the following command in terminal
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+cd resume-builder-remastered
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+now, run the following commands on termial.
 
-### `npm run eject`
+```
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Home Page View
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Home Page](https://github.com/dineshveguru/resume-builder-remastered/assets/82778240/7b3541ec-0bd6-4506-89aa-61be1d56c2c5)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### [Click Here to download an example Resume](https://github.com/dineshveguru/resume-builder-remastered/files/11662967/example.pdf)
 
-## Learn More
+## Contributions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome🎊! If you want to contribute to this project, please follow these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fork the repository.
+2. Create a new branch: `git checkout -b my-new-feature`
+3. Make your changes and commit them: `git commit -m 'Add some feature'`
+4. Push the changes to your fork: `git push origin my-new-feature`
+5. Submit a pull request.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the [MIT License](LICENSE).
 
-### Analyzing the Bundle Size
+## Contact Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For any questions or feedback, please mail me at dineshveguru123@gmail.com
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Thank you for using the Resume Builder Application! We hope it helps you create outstanding resumes and land your dream job. If you encounter any issues or have suggestions for improvement, please don't hesitate to reach out. Happy resume building!**

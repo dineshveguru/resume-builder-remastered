@@ -10,10 +10,10 @@ function RightComponent(props) {
   return (
     <div className="right--container">
       <About about={props.about} />
-      <Education educationSet={props.educationSet} />
       <Experience experienceSet={props.experienceSet} />
-      <Certificate certificateSet={props.certificateSet} />
       <Project projectSet={props.projectSet} />
+      <Education educationSet={props.educationSet} />
+      <Certificate certificateSet={props.certificateSet} />
       <Activity activitySet={props.activitySet} />
     </div>
   );
